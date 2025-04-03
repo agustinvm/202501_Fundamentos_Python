@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BASE</title>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+        />
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='css/estilo_columnas.css') }}"
+        />
+    </head>
+    <body>
+        <h1>Lotería Mexicana 2</h1>
+        <div class="grilla" style="grid-template-columns: repeat({{ y }}, 100px);">
+            {% for fila in color %}
+                {% for columna in fila %}
+                    <div class="cuadrado" style="background-color: {{ columna }};"></div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+    </body>
+</html>

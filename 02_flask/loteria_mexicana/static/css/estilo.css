@@ -1,0 +1,9 @@
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 5px;
+}
+.cuadrado {
+    width: 100px;
+    height: 100px;
+}

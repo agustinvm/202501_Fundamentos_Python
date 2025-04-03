@@ -1,0 +1,17 @@
+{%extends "base.html"%}
+
+{%block titulo%}Inicio{%endblock%}
+
+{%block contenido%}
+<h1 class="mt-2 p-2 text-center">Inicio</h1>
+{%endblock%}
+
+{%block mis_scripts%}
+<script>
+    toastr.success("Bienvenido a la aplicación mensajes flash", "Esta todo OK");
+    toastr.info("Bienvenido a la aplicación mensajes flash", "Esta todo OK");
+    toastr.error("Bienvenido a la aplicación mensajes flash", "Esta todo OK");
+    toastr.warning("Bienvenido a la aplicación mensajes flash", "Esta todo OK");
+</script>
+{%endblock%}
+

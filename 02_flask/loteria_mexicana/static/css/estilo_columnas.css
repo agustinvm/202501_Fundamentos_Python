@@ -1,0 +1,8 @@
+.grilla {
+    display: grid;
+    grid-gap: 5px;
+}
+.cuadrado {
+    width: 100px;
+    height: 100px;
+}
