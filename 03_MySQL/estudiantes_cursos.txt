@@ -1,0 +1,49 @@
+1. Crea 3 cursos nuevos
+USE esquema_estudiantes_curso;
+INSERT INTO cursos (nombre, created_at, update_at) 
+VALUES 
+	('Ingles', NOW(), NOW()),
+    ('Matematicas', NOW(), NOW()),
+    ('Biologia', NOW(), NOW())
+
+2. Elimina los 3 cursos que creaste
+USE esquema_estudiantes_curso;
+DELETE FROM cursos WHERE id IN (4, 5, 6)
+
+3. Crea otros 3 cursos nuevos
+USE esquema_estudiantes_curso;
+INSERT INTO cursos (nombre, created_at, update_at) 
+VALUES 
+	('Python', NOW(), NOW()),
+    ('JAVA', NOW(), NOW()),
+    ('HTML', NOW(), NOW());
+
+
+4-5-6. Crea 3 estudiantes que estén inscritos en el primer curso, segundo y tercero
+USE esquema_estudiantes_curso;
+INSERT INTO estudiantes (nombre, apellido, edad, created_at, update_at, cursos_id)
+VALUES 
+	('Miguel', 'Alvarez', 18, NOW(), NOW(), 7),
+    ('Angel', 'Perez', 21, NOW(), NOW(), 7),
+	('Ignacia', 'Diaz', 27, NOW(), NOW(), 7),
+    ('Manuel', 'Nouvea', 28, NOW(), NOW(), 8),
+    ('Barbara', 'Allende', 25, NOW(), NOW(), 8),
+    ('Cristobal', 'Colon', 30, NOW(), NOW(), 8),
+    ('Camilo', 'Valenzuela', 35, NOW(), NOW(), 9),
+    ('Andrea', 'Vargas', 38, NOW(), NOW(), 9),
+    ('Agustina', 'Hidalgo', 40, NOW(), NOW(), 9)
+
+7. Recupera todos los estudiantes que estén inscritos en el primer curso
+USE esquema_estudiantes_curso;
+SELECT * FROM estudiantes WHERE cursos_id = 7;    
+
+8. Recupera todos los estudiantes que estén inscritos en el último curso
+USE esquema_estudiantes_curso;
+SELECT * FROM estudiantes WHERE cursos_id = 9;
+
+9. Recupera el curso del último estudiante
+USE esquema_estudiantes_curso;
+SELECT cursos.nombre FROM estudiantes JOIN cursos ON cursos_id = cursos.id
+ORDER BY estudiantes.id DESC
+LIMIT 1
+

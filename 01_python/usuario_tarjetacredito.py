@@ -56,8 +56,8 @@ class Usuario:
 
 
 #Ejemplo
-usuario1 = Usuario("Agustin", "Perez", "agustin@gmail.com")
-usuario2 = Usuario("María", "Gomez", "maria@gmail.com")
+usuario1 = Usuario("Agustin", "Valenzuela", "agustin@gmail.com")
+usuario2 = Usuario("Ivanna", "Loiza", "maria@gmail.com")
 
 #Creacion de tarjetas
 tarjeta1 = TarjetaCredito(5000, 1, 1000)
