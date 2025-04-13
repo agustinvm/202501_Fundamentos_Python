@@ -60,9 +60,9 @@ def procesar_editar_comuna(id):
     return redirect("/comunas")
 # endregion
 
-@app.route("/comunas/<int:id>/eliminar")
+@app.route("/asesorias/<int:id>/eliminar", methods=["POST"])
 @login_required
-def procesar_eliminado_comuna(id):
-    Comuna.delete(id)
-    flash("Comuna eliminada correctamente", "success")
-    return redirect("/comunas")
+def procesar_eliminado_asesoria(id):
+    Asesoria.delete(id)
+    flash("Asesoría eliminada correctamente", "success")
+    return redirect("/asesorias")

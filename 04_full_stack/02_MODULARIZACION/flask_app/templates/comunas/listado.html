@@ -16,7 +16,7 @@
         </tr>
     </thead>
     <tbody>
-        {% for item in datos %}
+        {% for asesoria in datos %}
         <tr>
             <td>{{item.id}}</td>
             <td>{{item.nombre}}</td>
@@ -42,10 +42,10 @@
     $(".btnEliminar").click(function(){
 
         const identificador = $(this).data("identificador");
-        const nombre = $(this).data("nombre");
+        const nombre = $(this).data("tema");
 
         Swal.fire({
-            title: `¿Seguro que quieres eliminar ${nombre}?`,
+            title: `¿Seguro que quieres eliminar ${tema}?`,
             text: "No podrás revertir esta opción",
             icon: "warning",
             showCancelButton: true,
